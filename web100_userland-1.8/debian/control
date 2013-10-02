@@ -6,17 +6,29 @@ Standards-Version: 3.9.3
 Build-Depends: debhelper (>= 9)
 Homepage: http://www.web100.org
 
-Package: web100-userland
+Package: libweb100-0-dev
 Architecture: any
+Section: libdevel
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: web100 userland tools and libraries
+Pre-Depends: ${misc:Pre-Depends}
+Description: web100 userland development library
 	The Web100 software implements a set of instruments in the TCP/IP stack of an
 	operating system. The software is divided in two pieces:
-		A patch to the Linux kernel, which collects the data, and...
-		A library and a set of utilities (the userland), for accessing and
-		manipulating these instruments.
-	This userland requires the kernel patch to be installed and functioning for it
-	to work, though the libraries can be used to build tools such as NDT without the
-	kernel patch.
+	- A patch to the Linux kernel, which collects the data, and...
+	- A library and a set of utilities (the userland), for accessing and
+	manipulating these instruments.
+	This package provides the utilities and requires the kernel patch to be
+	installed and functioning. 
 
+Package: web100-userland-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: web100 userland tools 
+	The Web100 software implements a set of instruments in the TCP/IP stack of an
+	operating system. The software is divided in two pieces:
+	- A patch to the Linux kernel, which collects the data, and...
+	- A library and a set of utilities (the userland), for accessing and
+	manipulating these instruments.
+	This package provides the library and does not require the kernel patch to be
+	installed.
 

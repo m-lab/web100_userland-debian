@@ -1,0 +1,721 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package web100-userland
+dpkg-buildpackage: source version 1.8-1
+dpkg-buildpackage: source changed by Dominic Hamon <dominic@google.com>
+ dpkg-source --before-build web100_userland-1.8
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_testdir
+   dh_auto_clean
+make[1]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+Making distclean in python
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f Makefile
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+Making distclean in util
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making distclean in gui
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+ rm -f gutil gutil
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps
+rm -f Makefile
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+Making distclean in scripts
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+ rm -f readall readall
+ rm -f readvar readvar
+ rm -f deltavar deltavar
+ rm -f writevar writevar
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps
+rm -f Makefile
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+Making distclean in .
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+rm -f Makefile
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making distclean in lib
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+test -z "libweb100.la" || rm -f libweb100.la
+rm -f "./so_locations"
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+rm -f *.tab.c
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -rf ./.deps
+rm -f Makefile
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+Making distclean in doc
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making distclean in man
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+Making distclean in man7
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+Making distclean in man3
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+Making distclean in man1
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f Makefile
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+Making distclean in .
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+rm -f Makefile
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+Making distclean in .
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+rm -f Makefile
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making distclean in .
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+test -z "web100-config" || rm -f web100-config
+rm -rf .libs _libs
+rm -f *.lo
+test -z "" || rm -f 
+rm -f config.h stamp-h1
+rm -f libtool
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f Makefile
+make[1]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+   dh_clean
+ dpkg-source -b web100_userland-1.8
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building web100-userland using existing ./web100-userland_1.8.orig.tar.gz
+dpkg-source: info: building web100-userland in web100-userland_1.8-1.debian.tar.gz
+dpkg-source: info: building web100-userland in web100-userland_1.8-1.dsc
+ debian/rules build
+dh build
+   dh_testdir
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+dh_auto_configure -- --enable-python=no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... none
+checking for library containing strerror... none required
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) none
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether make sets $(MAKE)... (cached) yes
+checking whether ln -s works... yes
+checking for python... /usr/bin/python
+checking for python version... 2.7
+checking for python platform... linux2
+checking for python script directory... ${prefix}/lib/python2.7/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python2.7/site-packages
+checking for Python include path... /usr/include/python2.7
+checking for Python library path... /usr/lib/python2.7/config
+checking python extra libraries... 
+checking for swig... /usr/bin/swig
+checking for SWIG version... 2.0.4
+configure: WARNING: SWIG version >= 1.3.17 is required.  You have 2.0.4.  You should look at http://www.swig.org
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking how to run the C++ preprocessor... g++ -E
+checking for g77... no
+checking for xlf... no
+checking for f77... no
+checking for frt... no
+checking for pgf77... no
+checking for cf77... no
+checking for fort77... no
+checking for fl32... no
+checking for af77... no
+checking for xlf90... no
+checking for f90... no
+checking for pgf90... no
+checking for pghpf... no
+checking for epcf90... no
+checking for gfortran... no
+checking for g95... no
+checking for xlf95... no
+checking for f95... no
+checking for fort... no
+checking for ifort... no
+checking for ifc... no
+checking for efc... no
+checking for pgf95... no
+checking for lf95... no
+checking for ftn... no
+checking whether we are using the GNU Fortran 77 compiler... no
+checking whether  accepts -g... no
+checking the maximum length of command line arguments... 131072
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... ranlib
+checking for strip... strip
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC
+checking if gcc PIC flag -fPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC
+checking if g++ PIC flag -fPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking for pkg-config... /usr/bin/pkg-config
+checking for GTK+ - version >= 2.0.0... yes (version 2.24.10)
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for socklen_t... yes
+checking whether make is GNU make... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/man/Makefile
+config.status: creating doc/man/man1/Makefile
+config.status: creating doc/man/man3/Makefile
+config.status: creating doc/man/man7/Makefile
+config.status: creating lib/Makefile
+config.status: creating python/Makefile
+config.status: creating util/Makefile
+config.status: creating util/scripts/Makefile
+config.status: creating util/gui/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+make[1]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+   dh_auto_build
+make[1]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make  all-recursive
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+Making all in doc
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making all in man
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+Making all in man1
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+Making all in man3
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+Making all in man7
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[5]: Nothing to be done for `all-am'.
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making all in lib
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+/bin/sh ../libtool --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I.. -I..  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c -o web100.lo web100.c
+mkdir .libs
+ gcc -DHAVE_CONFIG_H -I. -I.. -I.. -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c web100.c  -fPIC -DPIC -o .libs/web100.o
+web100.c: In function 'web100_value_to_textn':
+web100.c:1172:9: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 4 has type 'u_int64_t' [-Wformat]
+web100.c:1172:9: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 4 has type 'u_int64_t' [-Wformat]
+ gcc -DHAVE_CONFIG_H -I. -I.. -I.. -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c web100.c -o web100.o >/dev/null 2>&1
+/bin/sh ../libtool --tag=CC   --mode=link gcc  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -version-info 3:3:3 -export-dynamic -Wl,-Bsymbolic-functions -Wl,-z,relro -o libweb100.la -rpath /usr/lib/x86_64-linux-gnu web100.lo    
+gcc -shared  .libs/web100.o   -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -Wl,-soname -Wl,libweb100.so.0 -o .libs/libweb100.so.0.3.3
+(cd .libs && rm -f libweb100.so.0 && ln -s libweb100.so.0.3.3 libweb100.so.0)
+(cd .libs && rm -f libweb100.so && ln -s libweb100.so.0.3.3 libweb100.so)
+ar cru .libs/libweb100.a  web100.o
+ranlib .libs/libweb100.a
+creating libweb100.la
+(cd .libs && rm -f libweb100.la && ln -s ../libweb100.la libweb100.la)
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+Making all in util
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making all in scripts
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../lib  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c readall.c
+/bin/sh ../../libtool --tag=CC   --mode=link gcc  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o readall readall.o ../../lib/libweb100.la 
+mkdir .libs
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o .libs/readall readall.o  ../../lib/.libs/libweb100.so
+creating readall
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../lib  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c readvar.c
+/bin/sh ../../libtool --tag=CC   --mode=link gcc  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o readvar readvar.o ../../lib/libweb100.la 
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o .libs/readvar readvar.o  ../../lib/.libs/libweb100.so
+creating readvar
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../lib  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c deltavar.c
+/bin/sh ../../libtool --tag=CC   --mode=link gcc  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o deltavar deltavar.o ../../lib/libweb100.la 
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o .libs/deltavar deltavar.o  ../../lib/.libs/libweb100.so
+creating deltavar
+gcc -DHAVE_CONFIG_H -I. -I../.. -I../../lib  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c writevar.c
+/bin/sh ../../libtool --tag=CC   --mode=link gcc  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o writevar writevar.o ../../lib/libweb100.la 
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o .libs/writevar writevar.o  ../../lib/.libs/libweb100.so
+creating writevar
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+Making all in gui
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c gutil.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c connectioninfo.c
+connectioninfo.c: In function ‘connection_info_refresh’:
+connectioninfo.c:253:6: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘char (*)[256]’ [-Wformat]
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c connectionlist.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c connectionselect.c
+connectionselect.c: In function ‘connection_select_set_addr_entry’:
+connectionselect.c:143:7: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+connectionselect.c:144:7: warning: incompatible implicit declaration of built-in function ‘strcat’ [enabled by default]
+connectionselect.c:148:7: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+connectionselect.c:149:7: warning: incompatible implicit declaration of built-in function ‘strcat’ [enabled by default]
+connectionselect.c: In function ‘select_button_callback’:
+connectionselect.c:317:3: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+connectionselect.c:318:3: warning: incompatible implicit declaration of built-in function ‘strcat’ [enabled by default]
+connectionselect.c:319:3: warning: incompatible implicit declaration of built-in function ‘strncat’ [enabled by default]
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c display.c
+display.c: In function ‘display_snap_update’:
+display.c:235:3: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u_int64_t’ [-Wformat]
+display.c:237:3: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u_int64_t’ [-Wformat]
+display.c:238:8: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+display.c: In function ‘display_construct’:
+display.c:375:5: warning: incompatible implicit declaration of built-in function ‘strncpy’ [enabled by default]
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c rcvtuner.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c sndtuner.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c toolbox.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c triage.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c utillaunch.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c variablelist.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c wcgraph.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c wcpie.c
+wcpie.c: In function ‘wc_pie_repaint’:
+wcpie.c:461:3: warning: incompatible implicit declaration of built-in function ‘strcpy’ [enabled by default]
+wcpie.c:471:17: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c web100poll.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c web100object.c
+gcc -DHAVE_CONFIG_H -I. -I../.. -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng12 -I../../lib -DWEB100_CONF_DIR=\"/etc\" -DWEB100_IMAGE_DIR=\"/usr/share/web100\"  -D_FORTIFY_SOURCE=2  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -c web100widget.c
+/bin/sh ../../libtool --tag=CC   --mode=link gcc  -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o gutil gutil.o connectioninfo.o connectionlist.o connectionselect.o display.o rcvtuner.o sndtuner.o toolbox.o triage.o utillaunch.o variablelist.o wcgraph.o wcpie.o web100poll.o web100object.o web100widget.o ../../lib/libweb100.la -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpango-1.0 -lfreetype -lfontconfig -lgobject-2.0 -lglib-2.0   
+mkdir .libs
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o .libs/gutil gutil.o connectioninfo.o connectionlist.o connectionselect.o display.o rcvtuner.o sndtuner.o toolbox.o triage.o utillaunch.o variablelist.o wcgraph.o wcpie.o web100poll.o web100object.o web100widget.o  ../../lib/.libs/libweb100.so -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 /usr/lib/x86_64-linux-gnu/libcairo.so -lpango-1.0 /usr/lib/x86_64-linux-gnu/libfreetype.so -lfontconfig -lgobject-2.0 -lglib-2.0
+creating gutil
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[4]: Nothing to be done for `all-am'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making all in python
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+rm -f web100-config web100-config.tmp
+sed -e 's,@WEB100_VERSION\@,1.8,g' -e 's,@PREFIX\@,/usr,g' -e 's,@EXEC_PREFIX\@,/usr,g' -e 's,@WEB100_INCLUDE_DIR\@,/usr/include,g' -e 's,@LIBDIR\@,/usr/lib/x86_64-linux-gnu,g' ./web100-config.in > web100-config.tmp
+chmod +x web100-config.tmp
+mv web100-config.tmp web100-config
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make[1]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+   dh_auto_test
+make[1]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+Making check in doc
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making check in man
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+Making check in man1
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+make[4]: Nothing to be done for `check'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+Making check in man3
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+make[4]: Nothing to be done for `check'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+Making check in man7
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[4]: Nothing to be done for `check'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[4]: Nothing to be done for `check-am'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[3]: Nothing to be done for `check-am'.
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making check in lib
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+Making check in util
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making check in scripts
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+make[3]: Nothing to be done for `check'.
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+Making check in gui
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+make[3]: Nothing to be done for `check'.
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[3]: Nothing to be done for `check-am'.
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making check in python
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[2]: Nothing to be done for `check'.
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make[1]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   dh_auto_install
+make[1]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+Making install in doc
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making install in man
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+Making install in man1
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/man/man1" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man1"
+ /usr/bin/install -c -m 644 './deltavar.1' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man1/deltavar.1'
+ /usr/bin/install -c -m 644 './readall.1' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man1/readall.1'
+ /usr/bin/install -c -m 644 './readvar.1' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man1/readvar.1'
+ /usr/bin/install -c -m 644 './gutil.1' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man1/gutil.1'
+ /usr/bin/install -c -m 644 './web100-config.1' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man1/web100-config.1'
+ /usr/bin/install -c -m 644 './writevar.1' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man1/writevar.1'
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man1'
+Making install in man3
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/man/man3" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3"
+ /usr/bin/install -c -m 644 './libweb100.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/libweb100.3'
+ /usr/bin/install -c -m 644 './web100_agent_accessors.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_agent_accessors.3'
+ /usr/bin/install -c -m 644 './web100_agent_find_var_and_group.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_agent_find_var_and_group.3'
+ /usr/bin/install -c -m 644 './web100_attach.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_attach.3'
+ /usr/bin/install -c -m 644 './web100_connection_accessors.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_accessors.3'
+ /usr/bin/install -c -m 644 './web100_connection_copy.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_copy.3'
+ /usr/bin/install -c -m 644 './web100_connection_data_copy.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_data_copy.3'
+ /usr/bin/install -c -m 644 './web100_connection_find.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_find.3'
+ /usr/bin/install -c -m 644 './web100_connection_find_v6.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_find_v6.3'
+ /usr/bin/install -c -m 644 './web100_connection_free_local_copy.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_free_local_copy.3'
+ /usr/bin/install -c -m 644 './web100_connection_from_socket.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_from_socket.3'
+ /usr/bin/install -c -m 644 './web100_connection_head.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_head.3'
+ /usr/bin/install -c -m 644 './web100_connection_lookup.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_lookup.3'
+ /usr/bin/install -c -m 644 './web100_connection_new_local_copy.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_new_local_copy.3'
+ /usr/bin/install -c -m 644 './web100_connection_next.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_connection_next.3'
+ /usr/bin/install -c -m 644 './web100_delta_any.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_delta_any.3'
+ /usr/bin/install -c -m 644 './web100_detach.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_detach.3'
+ /usr/bin/install -c -m 644 './web100_get_agent_type.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_agent_type.3'
+ /usr/bin/install -c -m 644 './web100_get_agent_version.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_agent_version.3'
+ /usr/bin/install -c -m 644 './web100_get_connection_agent.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_connection_agent.3'
+ /usr/bin/install -c -m 644 './web100_get_connection_cid.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_connection_cid.3'
+ /usr/bin/install -c -m 644 './web100_get_connection_spec.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_connection_spec.3'
+ /usr/bin/install -c -m 644 './web100_get_group_name.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_group_name.3'
+ /usr/bin/install -c -m 644 './web100_get_group_nvars.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_group_nvars.3'
+ /usr/bin/install -c -m 644 './web100_get_group_size.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_group_size.3'
+ /usr/bin/install -c -m 644 './web100_get_log_agent.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_log_agent.3'
+ /usr/bin/install -c -m 644 './web100_get_log_connection.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_log_connection.3'
+ /usr/bin/install -c -m 644 './web100_get_log_group.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_log_group.3'
+ /usr/bin/install -c -m 644 './web100_get_log_time.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_log_time.3'
+ /usr/bin/install -c -m 644 './web100_get_snap_group.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_snap_group.3'
+ /usr/bin/install -c -m 644 './web100_get_snap_group_name.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_snap_group_name.3'
+ /usr/bin/install -c -m 644 './web100_get_var_name.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_var_name.3'
+ /usr/bin/install -c -m 644 './web100_get_var_size.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_var_size.3'
+ /usr/bin/install -c -m 644 './web100_get_var_type.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_get_var_type.3'
+ /usr/bin/install -c -m 644 './web100_group_accessors.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_group_accessors.3'
+ /usr/bin/install -c -m 644 './web100_group_find.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_group_find.3'
+ /usr/bin/install -c -m 644 './web100_group_head.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_group_head.3'
+ /usr/bin/install -c -m 644 './web100_group_next.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_group_next.3'
+ /usr/bin/install -c -m 644 './web100_log_accessors.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_log_accessors.3'
+ /usr/bin/install -c -m 644 './web100_log_close_read.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_log_close_read.3'
+ /usr/bin/install -c -m 644 './web100_log_close_write.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_log_close_write.3'
+ /usr/bin/install -c -m 644 './web100_log_open_read.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_log_open_read.3'
+ /usr/bin/install -c -m 644 './web100_log_open_write.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_log_open_write.3'
+ /usr/bin/install -c -m 644 './web100_log_write.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_log_write.3'
+ /usr/bin/install -c -m 644 './web100_perror.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_perror.3'
+ /usr/bin/install -c -m 644 './web100_raw_read.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_raw_read.3'
+ /usr/bin/install -c -m 644 './web100_raw_write.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_raw_write.3'
+ /usr/bin/install -c -m 644 './web100_snap.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snap.3'
+ /usr/bin/install -c -m 644 './web100_snap_accessors.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snap_accessors.3'
+ /usr/bin/install -c -m 644 './web100_snap_data_copy.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snap_data_copy.3'
+ /usr/bin/install -c -m 644 './web100_snap_from_log.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snap_from_log.3'
+ /usr/bin/install -c -m 644 './web100_snap_group.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snap_group.3'
+ /usr/bin/install -c -m 644 './web100_snap_read.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snap_read.3'
+ /usr/bin/install -c -m 644 './web100_snapshot_alloc.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snapshot_alloc.3'
+ /usr/bin/install -c -m 644 './web100_snapshot_alloc_from_log.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snapshot_alloc_from_log.3'
+ /usr/bin/install -c -m 644 './web100_snapshot_free.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_snapshot_free.3'
+ /usr/bin/install -c -m 644 './web100_strerror.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_strerror.3'
+ /usr/bin/install -c -m 644 './web100_value_to_text.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_value_to_text.3'
+ /usr/bin/install -c -m 644 './web100_value_to_textn.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_value_to_textn.3'
+ /usr/bin/install -c -m 644 './web100_var_accessors.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_var_accessors.3'
+ /usr/bin/install -c -m 644 './web100_var_find.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_var_find.3'
+ /usr/bin/install -c -m 644 './web100_var_head.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_var_head.3'
+ /usr/bin/install -c -m 644 './web100_var_next.3' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man3/web100_var_next.3'
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man3'
+Making install in man7
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[5]: Nothing to be done for `install-exec-am'.
+test -z "/usr/share/man/man7" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man7"
+ /usr/bin/install -c -m 644 './web100.7' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/man/man7/web100.7'
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man/man7'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[5]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[5]: Nothing to be done for `install-exec-am'.
+make[5]: Nothing to be done for `install-data-am'.
+make[5]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc/man'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[4]: Nothing to be done for `install-exec-am'.
+test -z "/usr/doc/web100" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/doc/web100"
+ /usr/bin/install -c -m 644 'developer-guide.txt' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/doc/web100/developer-guide.txt'
+ /usr/bin/install -c -m 644 'user-guide.txt' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/doc/web100/user-guide.txt'
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/doc'
+Making install in lib
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+test -z "/usr/lib/x86_64-linux-gnu" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu"
+ /bin/sh ../libtool --mode=install /usr/bin/install -c  'libweb100.la' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu/libweb100.la'
+/usr/bin/install -c .libs/libweb100.so.0.3.3 /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu/libweb100.so.0.3.3
+(cd /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libweb100.so.0.3.3 libweb100.so.0 || { rm -f libweb100.so.0 && ln -s libweb100.so.0.3.3 libweb100.so.0; }; })
+(cd /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libweb100.so.0.3.3 libweb100.so || { rm -f libweb100.so && ln -s libweb100.so.0.3.3 libweb100.so; }; })
+/usr/bin/install -c .libs/libweb100.lai /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu/libweb100.la
+/usr/bin/install -c .libs/libweb100.a /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu/libweb100.a
+chmod 644 /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu/libweb100.a
+ranlib /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/lib/x86_64-linux-gnu/libweb100.a
+libtool: install: warning: remember to run `libtool --finish /usr/lib/x86_64-linux-gnu'
+test -z "/usr/include/web100" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/include/web100"
+ /usr/bin/install -c -m 644 'web100.h' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/include/web100/web100.h'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/lib'
+Making install in util
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making install in scripts
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+test -z "/usr/bin" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin"
+  /bin/sh ../../libtool --mode=install /usr/bin/install -c 'readall' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/readall'
+libtool: install: warning: `../../lib/libweb100.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+/usr/bin/install -c .libs/readall /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/readall
+  /bin/sh ../../libtool --mode=install /usr/bin/install -c 'readvar' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/readvar'
+libtool: install: warning: `../../lib/libweb100.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+/usr/bin/install -c .libs/readvar /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/readvar
+  /bin/sh ../../libtool --mode=install /usr/bin/install -c 'deltavar' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/deltavar'
+libtool: install: warning: `../../lib/libweb100.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+/usr/bin/install -c .libs/deltavar /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/deltavar
+  /bin/sh ../../libtool --mode=install /usr/bin/install -c 'writevar' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/writevar'
+libtool: install: warning: `../../lib/libweb100.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+/usr/bin/install -c .libs/writevar /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/writevar
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/scripts'
+Making install in gui
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+test -z "/usr/bin" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin"
+  /bin/sh ../../libtool --mode=install /usr/bin/install -c 'gutil' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/gutil'
+libtool: install: warning: `../../lib/libweb100.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+/usr/bin/install -c .libs/gutil /home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/gutil
+test -z "/etc" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/etc"
+ /usr/bin/install -c -m 644 'web100.2.rc' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/etc/web100.2.rc'
+ /usr/bin/install -c -m 644 'web100.1.rc' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/etc/web100.1.rc'
+ /usr/bin/install -c -m 644 'lcl.rc' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/etc/lcl.rc'
+ /usr/bin/install -c -m 644 'rmt.rc' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/etc/rmt.rc'
+test -z "/usr/share/web100" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/web100"
+ /usr/bin/install -c -m 644 'state_w2.gif' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/web100/state_w2.gif'
+ /usr/bin/install -c -m 644 'display_w2.gif' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/web100/display_w2.gif'
+ /usr/bin/install -c -m 644 'triage_w2.gif' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/web100/triage_w2.gif'
+ /usr/bin/install -c -m 644 'list_w2.gif' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/web100/list_w2.gif'
+ /usr/bin/install -c -m 644 'sndtuner_w2.gif' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/web100/sndtuner_w2.gif'
+ /usr/bin/install -c -m 644 'rcvtuner_w2.gif' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/web100/rcvtuner_w2.gif'
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util/gui'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[4]: Nothing to be done for `install-exec-am'.
+make[4]: Nothing to be done for `install-data-am'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/util'
+Making install in python
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make  install-exec-hook
+make[4]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[4]: Nothing to be done for `install-exec-hook'.
+make[4]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8/python'
+make[2]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make[3]: Entering directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+test -z "/usr/bin" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin"
+ /usr/bin/install -c 'web100-config' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/bin/web100-config'
+test -z "/usr/share/aclocal" || /bin/mkdir -p "/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/aclocal"
+ /usr/bin/install -c -m 644 'web100.m4' '/home/dominich/git/web100_userland-debian/web100_userland-1.8/debian/tmp/usr/share/aclocal/web100.m4'
+make[3]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make[2]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+make[1]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_userland-1.8'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_installcatalogs
+   dh_installcron
+   dh_installdebconf
+   dh_installemacsen
+   dh_installifupdown
+   dh_installinfo
+   dh_installinit
+   dh_installmenu
+   dh_installmime
+   dh_installmodules
+   dh_installlogcheck
+   dh_installlogrotate
+   dh_installpam
+   dh_installppp
+   dh_installudev
+   dh_installwm
+   dh_installxfonts
+   dh_installgsettings
+   dh_bugfiles
+   dh_ucf
+   dh_lintian
+   dh_gconf
+   dh_icons
+   dh_perl
+   dh_usrlocal
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: Pre-Depends field of package libweb100-0-dev: unknown substitution variable ${misc:Pre-Depends}
+dpkg-gencontrol: warning: Depends field of package libweb100-0-dev: unknown substitution variable ${shlibs:Depends}
+dpkg-gencontrol: warning: Depends field of package web100-userland-utils: unknown substitution variable ${shlibs:Depends}
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `libweb100-0-dev' in `../libweb100-0-dev_1.8-1_amd64.deb'.
+dpkg-deb: building package `web100-userland-utils' in `../web100-userland-utils_1.8-1_amd64.deb'.
+ dpkg-genchanges  >../web100-userland_1.8-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build web100_userland-1.8
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+P: web100-userland-utils: no-upstream-changelog
+W: web100-userland-utils: new-package-should-close-itp-bug
+W: web100-userland-utils: empty-binary-package
+P: libweb100-0-dev: no-upstream-changelog
+W: libweb100-0-dev: new-package-should-close-itp-bug
+W: libweb100-0-dev: empty-binary-package
+Finished running lintian.
