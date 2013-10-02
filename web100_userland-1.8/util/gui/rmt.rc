@@ -1,0 +1,5 @@
+
+style "default"
+{ 
+	bg[NORMAL] = { 0.45, 0.3, 0.3 }
+}

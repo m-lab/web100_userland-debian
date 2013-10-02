@@ -1,0 +1,77 @@
+News
+====
+
+    This document gives an overview of the major changes of the software since
+the last release.
+
+  1.7:
+    o Added and "octet" type.
+    o Fixed v4 mapped address bug in web100_connection_from_socket().
+
+  1.6:
+    o Switched to gtk2-only.
+    o Added a "str32" type.
+    o Fix a bug in web100_connection_find_v6() causing incorrect matches.
+
+  1.5:
+    o Fixed a flush bug on variable writing.
+    o Removed some non-existant function declarations in web100.h.
+    o Added the python Web100 module and libweb100 swig wrapper.
+    o Dropped the "Alpha" prefix since it's really not necessary. :)
+
+  Alpha 1.4:
+    o Updated stuner/rtuner to accomodate changes in kernel autotuning.
+
+  Alpha 1.3:
+    o The GUI has been rewritten.  The names of the GUI widgets have been
+      changed to be more intuitive.
+    o The GUI may be built with either GTK+ 1.2 or GTK+ 2.
+    o The userland now supports new kernel functionality, such as IPv6,
+      /proc file permissions, and autotuning.
+    o Updated and added man pages for all library functions.
+    o Added the functions web100_get_connection_addrtype and
+      web100_get_connection_spec_v6 to the library.
+    o Building the GUI may now be disabled using configure.
+    o Updated the developers' and users' guide.
+
+  Alpha 1.2:
+    o No changes from Alpha 1.2pre2.
+
+  Alpha 1.2pre2:
+    o Fixed the binary interface incompatibilities that were introduced
+      in Alpha 1.2pre1.  This means that programs which were compiled
+      against Alpha 1.1 should continue to work unchanged with the
+      Alpha 1.2pre2 libweb100.
+    o Made the 'readall' script work on both Alpha 1.2 and 2.0 kernels.
+
+  Alpha 1.2pre1:
+    o NOTE: The binary interface to libweb100 has changed slightly.  This
+      means that existing applications must be recompiled and relinked
+      with libweb100.  However, it is very likely that the recompile will
+      not require changes to existing source code.
+    o Added support for both IPv4 and IPv6 types from the kernel (previous
+      versions of the library would crash if the kernel returned IPv6
+      values).
+    o Added support for logging values from the kernel
+    o Addition of 'readvarm' and 'readconn' scripts
+    o Addition of man pages for many functions, such as the snapshot and
+      logging functions (some are only stubs).
+    o Many GUI improvements and cleanups
+    o Updates and cleanups to the developer's and user's guide.
+    o Removed some items from web100.h that were not meant to be public
+    o Support building on systems which do not have socklen_t
+
+  Alpha 1.1:
+    o GUI fixes: Renamed "util" to "gutil", fixed the vdt display,
+      consolidation of code, miscellaneous bug and display fixes.
+    o writevar fixed so that it works for integers
+    o Added web100_connection_from_socket() and web100_value_to_textn()
+      to libweb100.
+    o Bug fixes in libweb100, such as for _find() and _lookup()
+      functions.
+    o Documentation updates and additions, such as the developer's
+      guide, user's guide, and man pages for some libweb100 API
+      functions (see "man libweb100").
+
+  Alpha 1.0:
+    o First public release

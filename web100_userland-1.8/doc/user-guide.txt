@@ -1,0 +1,335 @@
+			WEB100 User Guide
+			=================
+
+I. Introduction
+
+   The Web100 modifications to the kernel are designed to assist a
+   user in trouble-shooting the network performance problems of a TCP
+   connection.  This is achieved by having set of instruments that
+   collect information about the various activities going on over a
+   TCP connection and providing an interface for tools and
+   applications to view and modify this information.
+
+   The web100 distribution comes with a set of tools for viewing and
+   setting the values of these instruments.  This User Guide describes
+   the purpose and usage of these tools.  This document and other
+   web100 documents are also available online at the following URL:
+
+	     internal.web100.org
+
+II. Brief Overview of the TCP Kernel Instrument Set (TCP-KIS)
+
+   The set of instruments, called the TCP Kernel Instrument Set
+   (TCP-KIS), is documented in detail in the document 
+
+       http://www.web100.org/download/tcp-kis.txt
+
+   The primary objective in the design of this set of instruments is
+   to collect as much of the information as possible to enable a user
+   to isolate the performance problems of a TCP connection.  Each
+   instrument is a variable in a "stats" structure that is linked
+   through the kernel socket structure.  The /proc interface is used
+   to expose these instruments outside the kernel.
+
+   Please note that the terms "variable" and "instrument" are used
+   synonymously in this document and most of the other related
+   documents.  It should also be noted that it still takes a user with
+   a thorough knowledge of the TCP protocol to understand and
+   interpret the numbers.  What these tools do provide a knowledgeable
+   user, however, is access to the information on the state of
+   activities going on over a TCP connection.
+
+III. Tools
+
+    The userland distribution contains the web100 library and a set
+    of tools.  Please see the README and INSTALL documents for
+    additional details about the contents of the distribution and
+    the procedure for installation.
+
+    The source for the library is located in the "lib" directory, and
+    the tools are located in the "util" directory.
+
+    Please keep in mind the following things about using these tools:
+
+      - Customization: If you are starting a monitoring session on a local
+	machine and a remote machine, both displaying X-windows on the
+	local host, there needs to be a way to distinguish between the
+	windows from the local machine versus the windows from the
+	remote machine.  The following customization files can be used
+	for customizing the colors and fonts of the windows that are
+	opened by the tools:
+
+	     web100.2.rc (respectively, web100.1.rc)
+                       - the GTK2 (respectively, GTK1) .rc file used by
+		         the tools by default
+	     lcl.rc    - the .rc file used by the tools with "-l" option
+	     rmt.rc    - the .rc file used by the tools when "-r" option
+
+	Using the "-l" option when running the tools on the local
+	machine causes the tools to display colors using the choices
+	in "lcl.rc" file.  Similarly using the "-r" option when
+	running the tools on the remote machine causes the tools to
+	display colors using the choices in "rmt.rc" file.
+	Alternatively, one can simply edit "web100.rc" on different
+	machine so that tools bring up windows in different colors.
+
+	The .rc files are installed in ${prefix}/etc/web100 upon a
+	"make install"; one may override the use of the default .rc files
+	by setting the environment variables WEB100_RC_FILE,
+	WEB100_RC_FILE_LOCAL, WEB100_RC_FILE_REMOTE.
+
+    The current tool set consists of the following GUI tools/applications
+    based on GTK2 (Version 2.06):
+
+	Toolbox                                     [toolbox]
+
+	All Variables List                          [variablelist]
+	Congestion Pie Chart (aka Triage Pie Chart) [triage]
+	Single Variable Display                     [display]
+	Sender Tuning Control                       [sndtuner]
+	Receiver Tuning Control                     [rcvtuner]
+	
+    A brief description of the tools is given below.
+
+    Toolbox:
+
+	This is typically the first tool that is started in the
+	process of trouble-shooting a TCP connection.  The primary
+	purpose of this tool is to enable a user to select the TCP
+	connection of interest to the user and launch one or more of
+	the other tools to do the monitoring and tuning.
+
+	Launch the toolbox by running the following command in
+	util/gui directory:
+
+		gutil &		on the local  machine;
+		gutil -r &      on the remote machine 
+
+	This brings up the Toolbox windows.  Please see the note above on
+	"Customization" to set the colors for these windows.
+
+	The titlebar of the Toolbox window has the name of the host on
+	which this command is being run.  In an optimal environment,
+	one would run one session on the local host, and another session
+	on the remote host (provided the remote host also has the web100
+	kernel).
+
+	The set of two text boxes in the top section of the window 
+	are for the TCP session, identified by the remote address:port
+	of a TCP connection, and a "Connection ID" (CID). The CID is a
+	unique identifier that is assigned by web100 for each TCP
+	connection on the host.  Initially these text boxes will be empty.
+	The first thing a user should do is to select a connection of
+	interest for monitoring and tuning by clicking the "Select" button.
+
+	Clicking the "Select" button in the Toolbox window brings up a
+	"Connection-selector" window with a list of all the TCP sessions
+	on the that host.  The format of the list is as follows:
+
+	Cmdline  PID  UID  Local-IP Port  Remote-IP Port  CID  State
+	-------  ---  ---  -------- ----  --------- ----  ---  -----
+
+	Please note the interpretation of "Local" and "Remote" is with
+	reference to the host on which the Toolbox is running.
+
+	Select a connection by clicking the connection that you are
+	interested in.  Once the connection is selected, you may close
+	this window.  Alternatively, one can simply double-click on a
+	line to select the connection and close the window in one
+	operation.
+
+	Just as an example, if you are doing an ftp transfer from the
+	local host to 128.182.141.104, and are interested in
+	diagnosing/tuning this connection, you should look for this IP
+	address under the "Remote-IP" column and select the
+	appropriate line by double-clicking on that line.  Once a
+	connection is selected, the IP Address and CID boxes in the
+	Toolbox window will be filled in with the information for the
+	selected connection.
+
+	Once a connection is selected, you proceed with the
+	trouble-shooting process using the tools indicated on the
+	buttons of the Toolbox.
+
+    First we will describe tools that don't require you to select a
+    variable.  It is assumed that a connection has been selected as
+    described above.
+
+    All Variables List ("List" button): this gives a list of all the
+    variables from the TCP-KIS and associated values for the chosen
+    connection.
+
+	The "All Variables List" consists of three columns.  The
+	first column is the variable name, the second is the value of
+	that variable, and the third column is the "delta" of that
+	variable over a certain sampling interval "delta-t"; only those
+	variables of type Counter32 or Counter64 (as specified in the
+	tcp-kis.txt, included in the distribution) have deltas calculated.
+	
+	One may change the length of the sampling interval by selecting
+	"Update Interval" under the "View" menu, and adjusting the slider
+	accordingly. The interval may be set from 0.1--3 seconds, the
+	default being 1; the choice of interval length will pertain to any
+	tools launched from the Toolbox.
+
+	If you are interested in monitoring one of the variables from
+	this list, you can open the "Single Variable Display tool"
+	(described below) for that variable by double-clicking (or
+	right-clicking) on that particular variable.
+
+    Congestion Pie Chart (Triage Pie Chart): This tool is helpful in
+	classifying the performance problem of a TCP connection into
+	one of three broad categories: "Sender Limited," "Receiver
+	Limited," or "Congestion Limited."  This tool brings up a
+	window with a pie-chart that has three sectors, one for each
+	category mentioned above.  The relative sizes of the sectors
+	help the user in determining the next course of action.  Since
+	each of these categories of problems is indicated by a
+	disjoint set of variables, it helps the user in selecting the
+	variables to concentrate on for further trouble-shooting.
+
+    Variable Display Tool: Use this tool for looking at the value of a
+	particular TCP-KIS variable on a particular connection.
+	Selecting the right set of variables to monitor can be useful
+	in the tuning process.
+
+	The variable display window has the identifying information
+	such as the name of the local host, the connection selected,
+	and the name of the variable. The choice of variable may be
+	changed by choosing from the drop-down menu or typing directly
+	into the "Variable name" window.
+
+	The "smooth" checkbox determines whether the plot is of the
+	actual values or of an exponential moving weight average (of
+	default weight 0.4).
+
+    Sender Tuning Control: Select this tool for tuning the sender
+	buffer, LimCwnd, and for toggling autotuning for the selected
+	connection.
+
+    Receiver Tuning Control: Select this tool for tuning the receiver
+	buffer, LimRwin, and for toggling autotuning for the selected
+	connection.
+
+    Each of the aforementioned tools may be run in a stand-alone mode
+    by running, e.g.,
+    	gutil variablelist &
+    The general usage of gutil is:
+    	gutil [tool name [tool args]] [CID] [-l|-r]
+
+
+    In addition to the GUI tools described above, the following command
+    line interfaces are provided:
+
+         readall.c:
+	 readvar.c:
+	 deltavar.c:
+	 writevar.c:
+	     These are sample programs to illustrate use of the library
+	     API.  Once compiled using the Makefile, you can use these
+	     programs to read/write values by running on a command line.
+	     These commands  may also be useful in scripts.
+	    
+IV. Trouble-shooting TCP Performance With Web100
+
+    As a strategy for TCP performance measurement and tuning it is
+    very important to observe the following:
+
+	- A TCP connection involves a "sender" and "receiver."  The
+	  sender maintains a significant amount of "state" information
+	  that is useful for performance measurement and tuning,
+	  whereas the information that can be deduced by the "state"
+	  of the receiver is significantly small.  The only purpose of
+	  running the web100 tools on the receiver would be for the
+	  purpose of possibly tuning the receiver's buffers.
+
+	- So, in a typical performance measurement and tuning session,
+	  most of the action will be taking place on the sender.  Note
+	  that this does not necessarily mean a "client" or "server."
+	  For example, an ftp client running on a local machine can be
+	  either a sender or receiver depending on whether it is doing
+	  a "put" or a "get" of a file.
+
+    Since a lot of the information about the data transfer process can
+    be deduced by observing the TCP state of the sender, it is best to
+    start the trouble-shooing process on the sender.
+	 
+    An indication of a TCP performance problem may come either from a
+    "Variable Display" of "Data Bytes Transferred," or by the intuitive
+    feeling of the user about how long a transfer should take over a
+    connection.  The first step in trouble-shooting is to identify if
+    there is a problem.  If the ratio of
+
+	  actual-transfer-rate / expected-peak-transfer-rate
+
+    is an indicator of how well the transfer is taking place.
+
+    If this ratio is too low, then it is necessary to find out what is
+    the causing the slowdown and then take appropriate action.
+
+    The first step in trouble-shooting the performance problem is to
+    look at the Triage Display.  This display gives you the first
+    level diagnostic information about what is holding back the
+    transfer rates.  It brings up a pie chart with three sectors as
+    indicated in the Tools section under "Triage Display."
+
+    While we can not address all possible situations in this document,
+    here are a few things one could do to diagnose the problem
+    further, depending on which of the three sectors is the largest
+    sector.
+
+    "Receiver Limited" sector is the largest sector:
+
+	- Observe "CurrentRwinRcvd" for the connection as a strip
+	  chart.
+
+	  If the value of CurrentRwinRcvd fluctuates a lot (changes by
+	  more than 2 MSS), then it is likely that the transfer rates
+	  are being restricted by the receiving application.  As an
+	  example, in the case of an ftp transfer, it could be because
+	  the receiving machine has a very slow disk or a slow
+	  processor that is heavily loaded.
+
+	  If the connection is receiver limited and the value of
+	  CurrentRwinRcvd is fairly constant, then it is likely that
+	  the receiver buffer space is too small.  If the receiving
+	  system is running web100, then run the receiver tuning tool
+	  (on the receiver), and set the receive buffer space up.
+	  (Note that the buffer has to be twice as large as the
+	  desired RWin).  For additional hints, or if the receiving
+	  system is not web100, please see the following URLs for
+	  information on manual network performance tuning:
+
+	  http://www.psc.edu/networking/perf_tune.html
+	  http://dast.nlanr.net/Articles/GettingStarted/TCP_window_size.html
+	  
+    "Sender Limited" sector is the largest sector:
+
+	- The conditions that are cause sender limits are not
+	  currently well instrumented.  The probable causes parallel
+	  the receiver side: application bottlenecks and sender tuning
+	  (use the tuning tool).  Note that true application idle is
+	  almost always reported as sender limited.  Protocol waits,
+	  such as when an application waits for a messages from the
+	  receiver also appear as sender limits.  These cases will be
+	  better instrumented in the future.
+
+    "Congestion Limited" sector is the largest sector:
+
+	- The path itself is the bottleneck.  Look for excessive
+	  packet loss, round-trip time, etc, that might be limiting
+	  performance.  This is another condition that will have
+	  better instrumentation in the future.
+
+    Note that under ideal circumstances, there will always be some
+    ultimate performance limit and it will be reported by the triage
+    tool.
+
+IV. Documentation/Help
+
+    Please see the man pages for additional information.  A good place
+    to start is the man page for gutil.  Manual pages generally
+    expected to be more current than this document.
+
+    If you have any problems/comments, please feel free to send email
+    to support@web100.org.

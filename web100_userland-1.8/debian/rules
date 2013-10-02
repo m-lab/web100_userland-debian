@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+# Disable python swig build
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-python=no
+
+%:
+	dh $@
