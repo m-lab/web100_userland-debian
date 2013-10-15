@@ -17,23 +17,23 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1: 
- c845fe8445e64e64556d8f05167607735173c41e 969 web100-userland_1.8-1.dsc
+ 2b96c0a4c264eb9015f6528c97981ad15c25e841 969 web100-userland_1.8-1.dsc
  1af1d76289f502754c894887f0e972f3f2671883 484721 web100-userland_1.8.orig.tar.gz
- ec77f230c230cd77f0d02d131044ce2e4620bbf3 1862 web100-userland_1.8-1.debian.tar.gz
- a1138b1239e5194d35e310bfc78e5d03ebdc4115 13008 libweb100-0_1.8-1_amd64.deb
- 857f31dc4fb893f4da3a91dd2e59ceb676e598b4 29278 libweb100-0-dev_1.8-1_amd64.deb
- 234ecb32c2f6dd318bde66cf8c8327ef60aac8be 56388 web100-userland-utils_1.8-1_amd64.deb
+ b3062e7fb7e53b03b2582eb3e5b6f5de1a39e656 1863 web100-userland_1.8-1.debian.tar.gz
+ 265c96ff853c7e7cabffefb359a5edc343ff6f78 13008 libweb100-0_1.8-1_amd64.deb
+ a9ea34e4cb6cb45f1cc1122076ff2942bc90838f 29282 libweb100-0-dev_1.8-1_amd64.deb
+ 5bc9de26c70e3c0c31f765ea687df8eaa112008f 56388 web100-userland-utils_1.8-1_amd64.deb
 Checksums-Sha256: 
- c02319bed7eccfc68ba165b874fc38444ed1d4f043e30fa97e9e3ea4c6a0b07f 969 web100-userland_1.8-1.dsc
+ 9628e957ce8f65f6c856e30d961a403d9504efc119c04c4cdd943dee8a3e8e5c 969 web100-userland_1.8-1.dsc
  bb288d980aaf8e7b5fc8b86ebd17e3f1f70ac36b79ef6a3d490af04c372cd4a4 484721 web100-userland_1.8.orig.tar.gz
- 9f3ef2fc43de7dc04ee52a901bdc0cc3eef69098e0893e29036c58c52bf5147b 1862 web100-userland_1.8-1.debian.tar.gz
- 94f3d5fa6d05e8dde95a7ed9257adfb4d0851aa482487b52f86b54dc058f326c 13008 libweb100-0_1.8-1_amd64.deb
- 3753e40bb768f2c44142e5aa0e49064ac58bdab69864999a10102c11b56cb5ea 29278 libweb100-0-dev_1.8-1_amd64.deb
- 79a8fda739f17c42fed25ed8896bd2fa1df1a427aa64f6e87fa9c7647cc55576 56388 web100-userland-utils_1.8-1_amd64.deb
+ 86d04843cfc4e88fc465c8e052182fc51db06fa37141eaa7a4a16dbc181a6f1b 1863 web100-userland_1.8-1.debian.tar.gz
+ 37484f19b825ffa662a6c5e806e6a4c946b6953b98ecd849f8f8bc483e231c23 13008 libweb100-0_1.8-1_amd64.deb
+ d2863dcd852a6ffcf0459af606468bcee28b41041ab3d6a6c2eb463dba3556a4 29282 libweb100-0-dev_1.8-1_amd64.deb
+ c34441545efc382390f223c267535bb8e4cb8f852ebc2c17917762c4fc0fc0b0 56388 web100-userland-utils_1.8-1_amd64.deb
 Files: 
- 627e86a64d920d5debdf4475d70db66a 969 utils optional web100-userland_1.8-1.dsc
+ 0ebf8df144842d60ec5377e6078d3844 969 utils optional web100-userland_1.8-1.dsc
  4dd53dfe4df3946ed606b22a73ec1bf3 484721 utils optional web100-userland_1.8.orig.tar.gz
- d637b65c5bd30cf030e3a6662dc685d8 1862 utils optional web100-userland_1.8-1.debian.tar.gz
- 16c64cdbdfb09644088bf323de3622ea 13008 devel optional libweb100-0_1.8-1_amd64.deb
- 3c7965de92fd943b7e5bb81e2f63447f 29278 libdevel optional libweb100-0-dev_1.8-1_amd64.deb
- 185ea0c64bfb48b54ba1d7c4c0213eda 56388 utils optional web100-userland-utils_1.8-1_amd64.deb
+ dcc9234964d3b56c39a3660dd1d89bc6 1863 utils optional web100-userland_1.8-1.debian.tar.gz
+ 0cf52367f555a5c9b71aa47a38849644 13008 devel optional libweb100-0_1.8-1_amd64.deb
+ 2fc7b419ef908337de941a44df19f62c 29282 libdevel optional libweb100-0-dev_1.8-1_amd64.deb
+ 4fcb8909a3f2f744bc8379f5749aed3a 56388 utils optional web100-userland-utils_1.8-1_amd64.deb
