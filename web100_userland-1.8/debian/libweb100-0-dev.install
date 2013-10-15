@@ -1,0 +1,5 @@
+usr/doc/web100/developer-guide.txt usr/share/doc/web100/
+usr/include
+usr/lib/*/libweb100*.so
+usr/share/man/man3
+usr/share/man/man7

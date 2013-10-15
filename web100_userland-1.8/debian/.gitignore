@@ -1,3 +1,14 @@
 tmp/
-libweb100-0-dev*
-web100-userland-utils*
+files
+libweb100-0-dev.debhelper.log
+libweb100-0-dev.substvars
+libweb100-0-dev/
+libweb100-0.debhelper.log
+libweb100-0.postinst.debhelper
+libweb100-0.postrm.debhelper
+libweb100-0.substvars
+libweb100-0/
+web100-userland-utils.debhelper.log
+web100-userland-utils.substvars
+web100-userland-utils/
+

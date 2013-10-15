@@ -1,0 +1,5 @@
+Makefile
+man/Makefile
+man/man1/Makefile
+man/man3/Makefile
+man/man7/Makefile

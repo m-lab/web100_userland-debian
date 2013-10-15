@@ -1,5 +1,10 @@
 *.o
 config.h
+install
 stamp-h1
 web100-config
+Makefile
+config.log
+config.status
+libtool
 
