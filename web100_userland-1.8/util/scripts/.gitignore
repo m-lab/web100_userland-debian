@@ -1,0 +1,6 @@
+Makefile
+deltavar
+readall
+readvar
+writevar
+.libs/

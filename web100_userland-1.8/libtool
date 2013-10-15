@@ -66,12 +66,12 @@ fast_install=yes
 
 # The host system.
 host_alias=
-host=x86_64-pc-linux-gnu
+host=x86_64-unknown-linux-gnu
 host_os=linux-gnu
 
 # The build system.
-build_alias=x86_64-linux-gnu
-build=x86_64-pc-linux-gnu
+build_alias=
+build=x86_64-unknown-linux-gnu
 build_os=linux-gnu
 
 # An echo program that does not interpret backslashes.
@@ -85,7 +85,7 @@ AR_FLAGS="cru"
 LTCC="gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security"
+LTCFLAGS="-g -O2"
 
 # A language-specific compiler.
 CC="gcc"
@@ -7245,12 +7245,12 @@ fast_install=yes
 
 # The host system.
 host_alias=
-host=x86_64-pc-linux-gnu
+host=x86_64-unknown-linux-gnu
 host_os=linux-gnu
 
 # The build system.
-build_alias=x86_64-linux-gnu
-build=x86_64-pc-linux-gnu
+build_alias=
+build=x86_64-unknown-linux-gnu
 build_os=linux-gnu
 
 # An echo program that does not interpret backslashes.
@@ -7264,7 +7264,7 @@ AR_FLAGS="cru"
 LTCC="gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security"
+LTCFLAGS="-g -O2"
 
 # A language-specific compiler.
 CC="g++"

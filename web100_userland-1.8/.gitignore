@@ -1,1 +1,5 @@
-lib/
+*.o
+config.h
+stamp-h1
+web100-config
+
