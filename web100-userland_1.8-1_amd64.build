@@ -127,6 +127,7 @@ make[1]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_use
  dpkg-source -b web100_userland-1.8
 dpkg-source: info: using source format `3.0 (quilt)'
 dpkg-source: info: building web100-userland using existing ./web100-userland_1.8.orig.tar.gz
+dpkg-source: warning: newly created empty file 'install' will not be represented in diff
 dpkg-source: info: building web100-userland in web100-userland_1.8-1.debian.tar.gz
 dpkg-source: info: building web100-userland in web100-userland_1.8-1.dsc
  debian/rules build
@@ -702,9 +703,9 @@ make[1]: Leaving directory `/home/dominich/git/web100_userland-debian/web100_use
    dh_gencontrol
 dpkg-gencontrol: warning: Pre-Depends field of package libweb100-0-dev: unknown substitution variable ${misc:Pre-Depends}
 dpkg-gencontrol: warning: Depends field of package libweb100-0-dev: unknown substitution variable ${shlibs:Depends}
-dpkg-gencontrol: warning: Depends field of package web100-userland-utils: unknown substitution variable ${shlibs:Depends}
    dh_md5sums
    dh_builddeb
+dpkg-deb: building package `libweb100-0' in `../libweb100-0_1.8-1_amd64.deb'.
 dpkg-deb: building package `libweb100-0-dev' in `../libweb100-0-dev_1.8-1_amd64.deb'.
 dpkg-deb: building package `web100-userland-utils' in `../web100-userland-utils_1.8-1_amd64.deb'.
  dpkg-genchanges  >../web100-userland_1.8-1_amd64.changes
@@ -712,10 +713,13 @@ dpkg-genchanges: including full source code in upload
  dpkg-source --after-build web100_userland-1.8
 dpkg-buildpackage: full upload (original source is included)
 Now running lintian...
+W: web100-userland source: binaries-have-file-conflict libweb100-0-dev web100-userland-utils usr/share/man/man7/web100.7.gz
 P: web100-userland-utils: no-upstream-changelog
 W: web100-userland-utils: new-package-should-close-itp-bug
-W: web100-userland-utils: empty-binary-package
+W: web100-userland-utils: manpage-has-errors-from-man usr/share/man/man7/web100.7.gz 8: warning: macro `m1' not defined
 P: libweb100-0-dev: no-upstream-changelog
 W: libweb100-0-dev: new-package-should-close-itp-bug
-W: libweb100-0-dev: empty-binary-package
+W: libweb100-0-dev: manpage-has-errors-from-man usr/share/man/man7/web100.7.gz 8: warning: macro `m1' not defined
+P: libweb100-0: no-upstream-changelog
+W: libweb100-0: new-package-should-close-itp-bug
 Finished running lintian.
